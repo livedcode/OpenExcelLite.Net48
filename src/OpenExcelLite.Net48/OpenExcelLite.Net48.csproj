@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<!-- Target both .NET Framework versions -->
+		<TargetFrameworks>net48;net481</TargetFrameworks>
+
+		<!-- NuGet metadata -->
+		<PackageId>OpenExcelLite.Net48</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>livedcode</Authors>
+		<Product>OpenExcelLite.Net48</Product>
+		<Description>
+			Lightweight, schema-safe Excel (XLSX) generator for .NET Framework 4.8 / 4.8.1 using OpenXML 3.3.0.
+			Supports multi-sheet workbooks, hyperlinks, auto column width, header styling, freeze panes,
+			date and numeric cells, and in-memory export.
+		</Description>
+
+		<PackageTags>excel;xlsx;openxml;net48;net481;export;OpenExcelLite;excelbuilder;excelsheet</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/livedcode/OpenExcelLite.Net48</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/livedcode/OpenExcelLite.Net48</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+
+		<!-- Pack README -->
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+
+		<!-- Enable NuGet pack -->
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Dependencies -->
+		<PackageReference Include="DocumentFormat.OpenXml" Version="3.3.0" />
+	</ItemGroup>
+	
+	<!-- README + LICENSE -->
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+</Project>
